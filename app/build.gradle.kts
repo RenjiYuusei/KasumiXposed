@@ -40,6 +40,8 @@ android {
             val ks = file("../release.keystore")
             if (ks.exists()) {
                 signingConfig = signingConfigs.getByName("release")
+            } else {
+                signingConfig = signingConfigs.getByName("debug")
             }
         }
     }
