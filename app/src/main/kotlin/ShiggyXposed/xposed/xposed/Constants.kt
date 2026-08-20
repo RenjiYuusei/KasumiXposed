@@ -10,10 +10,10 @@ class Constants {
         const val MAIN_SCRIPT_FILE = "bundle.js"
 
 
-        const val LOG_TAG = "Shiggy"
+        const val LOG_TAG = "Kasumi"
 
-        const val LOADER_NAME = "ShiggyXposed"
+        const val LOADER_NAME = "KasumiXposed"
 
-        const val USER_AGENT = "ShiggyXposed"
+        const val USER_AGENT = "KasumiXposed"
     }
 }

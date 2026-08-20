@@ -20,7 +20,7 @@ import java.io.*
  */
 class PluginsModule : Module() {
     private companion object {
-        const val DATA_DIR = "Shiggy/plugins"
+        const val DATA_DIR = "Kasumi/plugins"
         const val STATES_FILE = "states"
     }
 

@@ -52,9 +52,9 @@ object UpdaterModule : Module() {
     private const val ETAG_FILE = "etag.txt"
     private const val CONFIG_FILE = "loader.json"
 
-    private const val DEFAULT_BASE_URL = "https://github.com/kmmiio99o/ShiggyCord/releases/latest/download/"
-    private const val FALLBACK_BASE_URL = "https://bundle.shiggycord.dev/"
-    private const val DEFAULT_BUNDLE_NAME = "shiggycord.min.js"
+    private const val DEFAULT_BASE_URL = "https://github.com/RenjiYuusei/KasumiCord/releases/latest/download/"
+    private const val FALLBACK_BASE_URL = "https://github.com/RenjiYuusei/KasumiCord/releases/latest/download/"
+    private const val DEFAULT_BUNDLE_NAME = "kasumicord.min.js"
 
     override fun onLoad(packageParam: XC_LoadPackage.LoadPackageParam) = with(packageParam) {
         cacheDir = File(appInfo.dataDir, Constants.CACHE_DIR).apply { mkdirs() }
@@ -152,7 +152,8 @@ object UpdaterModule : Module() {
                 val hbcName = "shiggycord.$hermesVersion.hbc"
                 when {
                     info.paths.contains(hbcName) -> baseUrl + hbcName
-                    info.paths.contains("shiggycord.min.js") -> baseUrl + "shiggycord.min.js"
+                    info.paths.contains("kasumicord.min.js") -> baseUrl + "kasumicord.min.js"
+                    info.paths.contains("kasumicord.js") -> baseUrl + "kasumicord.js"
                     else -> baseUrl + DEFAULT_BUNDLE_NAME
                 }
             } else null

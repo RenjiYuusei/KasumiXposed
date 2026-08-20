@@ -15,7 +15,7 @@ object RecoveryMenu {
 
             val container = LogBoxComponents.createMenuContainer(context, colors)
 
-            container.addView(LogBoxComponents.createTitle(context, colors, "ShiggyXposed Recovery", center = true))
+            container.addView(LogBoxComponents.createTitle(context, colors, "KasumiXposed Recovery", center = true))
             container.addView(LogBoxComponents.createSubtitle(context, colors, "Select an option to continue"))
 
             val safeModeText = if (LogBoxUtils.isSafeModeEnabled(context)) "Disable Safe Mode" else "Enable Safe Mode"
