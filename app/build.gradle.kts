@@ -18,10 +18,13 @@ android {
 
     signingConfigs {
         create("release") {
-            storeFile = file("../release.keystore")
-            storePassword = "shiggyxposed"
-            keyAlias = "shiggyxposed"
-            keyPassword = "shiggyxposed"
+            val ks = file("../release.keystore")
+            if (ks.exists()) {
+                storeFile = ks
+                storePassword = "shiggyxposed"
+                keyAlias = "shiggyxposed"
+                keyPassword = "shiggyxposed"
+            }
         }
     }
 
@@ -34,7 +37,10 @@ android {
         release {
             isDebuggable = false
             isMinifyEnabled = false
-            signingConfig = signingConfigs.getByName("release")
+            val ks = file("../release.keystore")
+            if (ks.exists()) {
+                signingConfig = signingConfigs.getByName("release")
+            }
         }
     }
     compileOptions {
